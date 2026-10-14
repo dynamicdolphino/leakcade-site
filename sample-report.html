@@ -36,7 +36,7 @@ ol.order li:first-child{border:0}
 ol.order li::before{content:counter(o,decimal-leading-zero);font:400 22px VT;color:var(--ac)}
 ol.order a{color:var(--ink);text-decoration:none;font-weight:500}ol.order a:hover{text-decoration:underline;text-decoration-color:var(--ac)}
 .tag{display:inline-block;font:400 9.5px Pix;padding:4px 6px;border-radius:3px;color:#0a0b05;letter-spacing:.04em;white-space:nowrap}
-.clean{display:flex;gap:12px;align-items:center}.mascot{image-rendering:pixelated;vertical-align:middle}.wm{font:400 14px Pix,monospace;letter-spacing:.06em}.wm span{color:var(--ac)}.marq .mascot{width:22px;height:22px;margin-right:6px}.sev-h .mascot{width:28px;height:28px}.sev-h{display:flex;align-items:center;gap:12px;margin:40px 0 14px;font-size:20px}.sev-h .n{font:400 22px VT;color:var(--mu)}
+.clean{display:flex;gap:12px;align-items:center}.mascot{image-rendering:pixelated;vertical-align:middle}.wm{font:400 14px Pix,monospace;letter-spacing:.06em}.wm span{color:var(--ac)}.marq .mascot{width:22px;height:22px;margin-right:6px}.sev-h .mascot{width:28px;height:28px}.disc{margin-top:40px;padding-top:16px;border-top:1px solid #23262b;font-size:12px;line-height:1.5;color:#8a8f98;break-inside:avoid}.sev-h{display:flex;align-items:center;gap:12px;margin:40px 0 14px;font-size:20px}.sev-h .n{font:400 22px VT;color:var(--mu)}
 .f{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin-bottom:14px}
 .f h3{font-size:20px;letter-spacing:-.015em}
 .loc{font:400 18px/1.2 VT;color:var(--ac2);margin-top:6px;word-break:break-all}
@@ -69,4 +69,5 @@ ol.order a{color:var(--ink);text-decoration:none;font-weight:500}ol.order a:hove
 <div class="meta">How the score works: we start at 100 and subtract 25 per critical (max 60), 10 per high (max 30) and 3 per medium (max 15) finding. Any critical finding caps the score at 49. Use it as a guide. It is not a certification.
 This is an AI-assisted first-pass review. It can miss issues and can be wrong, so every finding names its file for you to check.
 Your code was never executed, and the clone was deleted after this report.<ul><li>AI review skipped (no API key); findings come from scanners only</li><li>111 files in repo, 44 code files</li></ul></div>
+<footer class="disc"><b>Disclaimer.</b> Leakcade is an automated check. It can miss vulnerabilities and is not a substitute for a professional security audit or pentest. Provided as is. You stay responsible for your code. Where the law allows, our liability is limited to what you paid for this report. Full terms: https://leakcade.com/terms.html#disclaimer</footer>
 </main><script>document.querySelectorAll('.copy').forEach(b=>b.onclick=async()=>{try{await navigator.clipboard.writeText(b.parentNode.querySelector('.pt').textContent);b.textContent='COPIED'}catch(e){b.textContent='SELECT TEXT'}setTimeout(()=>b.textContent='COPY',1800)})</script></body></html>
