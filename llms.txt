@@ -19,5 +19,6 @@
 - [Leaked API keys in vibe-coded apps](https://leakcade.com/leaked-api-keys.html)
 - [Vibe coding security checklist](https://leakcade.com/vibe-coding-security-checklist.html)
 - [Supabase RLS mistakes](https://leakcade.com/supabase-rls-mistakes.html)
+- [Is your Lovable app secure?](https://leakcade.com/lovable-app-security.html)
 - [Slopsquatting explained](https://leakcade.com/slopsquatting-explained.html)
 - [Sponsors](https://leakcade.com/sponsors.html)
