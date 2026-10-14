@@ -1,0 +1,23 @@
+# Leakcade
+> AI-assisted security and bug review for public GitHub repos built with AI coding tools. $19 per check, HTML + PDF report by email within ~1 hour, with copy-paste fix prompts for Cursor and Claude Code. Status: pre-launch.
+
+## Key facts
+- Free teaser: scanners only (gitleaks, Semgrep, Bandit, OSV, package-name check, auth-route check). Score, counts by severity, one redacted sample finding. No fix prompts. Cap 20 MB, rate-limited. Email required; newsletter opt-in unchecked by default.
+- Full report: $19 USD one-time per repo (Stripe). Same scanners plus AI review (Claude). Full findings with fix prompts, HTML + PDF by email within ~1 hour.
+- Input: public GitHub repository URL + email
+- Checks: leaked secrets incl. git history (gitleaks), static analysis (Semgrep), vulnerable dependencies (OSV), dependencies that don't exist on npm/PyPI (slopsquatting check), write routes without a visible login check in Next.js/Express/FastAPI and Supabase tables without RLS or with USING (true) write policies (auth-route check, heuristic), AI review on the paid report only
+- Code is never executed; scanned in a no-network sandbox; deleted after the report
+- Refunds: automatic if the check can't run or the report isn't delivered within 24 hours (policy is a draft)
+- Not a replacement for a professional security audit; no private repos yet
+
+## Pages
+- [Product facts](https://leakcade.com/about.html)
+- [Security & data handling](https://leakcade.com/security.html)
+- [Sample report (example)](https://leakcade.com/sample-report.html)
+- [Example free scan](https://leakcade.com/free-scan-example.html)
+- [Is my AI-generated code secure?](https://leakcade.com/secure-ai-code.html)
+- [Leaked API keys in vibe-coded apps](https://leakcade.com/leaked-api-keys.html)
+- [Vibe coding security checklist](https://leakcade.com/vibe-coding-security-checklist.html)
+- [Supabase RLS mistakes](https://leakcade.com/supabase-rls-mistakes.html)
+- [Slopsquatting explained](https://leakcade.com/slopsquatting-explained.html)
+- [Sponsors](https://leakcade.com/sponsors.html)

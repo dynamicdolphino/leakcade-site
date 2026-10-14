@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://leakcade.com/sitemap.xml
