@@ -5,20 +5,20 @@
 - Free teaser: scanners only (gitleaks, Semgrep, Bandit, OSV, package-name check, auth-route check). Score, counts by severity, one redacted sample finding. No fix prompts. Cap 20 MB, rate-limited. Email required; newsletter opt-in unchecked by default.
 - Full report: $19 USD one-time per repo (Stripe). Same scanners plus AI review (Claude). Full findings with fix prompts, HTML + PDF by email within ~1 hour.
 - Input: public GitHub repository URL + email
-- Checks: leaked secrets incl. git history (gitleaks), static analysis (Semgrep), vulnerable dependencies (OSV), dependencies that don't exist on npm/PyPI (slopsquatting check), write routes without a visible login check in Next.js/Express/FastAPI and Supabase tables without RLS or with USING (true) write policies (auth-route check, heuristic), AI review on the paid report only
+- Checks: leaked secrets incl. git history (gitleaks), static analysis (Semgrep), vulnerable dependencies (OSV), dependencies that don't exist on npm/PyPI (slopsquatting check), write routes without a visible login check in Next.js/Express/FastAPI and Supabase tables without RLS or with USING (true) write policies (auth-route check, heuristic), payment bypasses: unsigned Stripe/Lemon Squeezy webhooks, success pages that grant the paid plan without verifying payment, paid status written from browser code (payment check, heuristic), AI review on the paid report only
 - Code is never executed; scanned in a no-network sandbox; deleted after the report
 - Refunds: automatic if the check can't run or the report isn't delivered within 24 hours (policy is a draft)
 - Not a replacement for a professional security audit; no private repos yet
 
 ## Pages
-- [Product facts](https://leakcade.com/about.html)
-- [Security & data handling](https://leakcade.com/security.html)
-- [Sample report (example)](https://leakcade.com/sample-report.html)
-- [Example free scan](https://leakcade.com/free-scan-example.html)
-- [Is my AI-generated code secure?](https://leakcade.com/secure-ai-code.html)
-- [Leaked API keys in vibe-coded apps](https://leakcade.com/leaked-api-keys.html)
-- [Vibe coding security checklist](https://leakcade.com/vibe-coding-security-checklist.html)
-- [Supabase RLS mistakes](https://leakcade.com/supabase-rls-mistakes.html)
-- [Is your Lovable app secure?](https://leakcade.com/lovable-app-security.html)
-- [Slopsquatting explained](https://leakcade.com/slopsquatting-explained.html)
-- [Sponsors](https://leakcade.com/sponsors.html)
+- [Product facts](https://dynamicdolphino.github.io/leakcade-site/about.html)
+- [Security & data handling](https://dynamicdolphino.github.io/leakcade-site/security.html)
+- [Sample report (example)](https://dynamicdolphino.github.io/leakcade-site/sample-report.html)
+- [Example free scan](https://dynamicdolphino.github.io/leakcade-site/free-scan-example.html)
+- [Is my AI-generated code secure?](https://dynamicdolphino.github.io/leakcade-site/secure-ai-code.html)
+- [Leaked API keys in vibe-coded apps](https://dynamicdolphino.github.io/leakcade-site/leaked-api-keys.html)
+- [Vibe coding security checklist](https://dynamicdolphino.github.io/leakcade-site/vibe-coding-security-checklist.html)
+- [Supabase RLS mistakes](https://dynamicdolphino.github.io/leakcade-site/supabase-rls-mistakes.html)
+- [Is your Lovable app secure?](https://dynamicdolphino.github.io/leakcade-site/lovable-app-security.html)
+- [Slopsquatting explained](https://dynamicdolphino.github.io/leakcade-site/slopsquatting-explained.html)
+- [Sponsors](https://dynamicdolphino.github.io/leakcade-site/sponsors.html)
