@@ -24,4 +24,5 @@ Last updated: 2026-10-19
 - [Is your Lovable app secure?](https://leakcade.com/lovable-app-security.html)
 - [Slopsquatting explained](https://leakcade.com/slopsquatting-explained.html)
 - [VITE_ and NEXT_PUBLIC_ env vars are public](https://leakcade.com/public-env-vars.html)
+- [Your Stripe webhook can be faked](https://leakcade.com/stripe-webhook-security.html)
 - [Sponsors](https://leakcade.com/sponsors.html)
