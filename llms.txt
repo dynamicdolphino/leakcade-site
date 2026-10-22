@@ -29,4 +29,5 @@ Last updated: 2026-10-22
 - [Your login has no rate limit](https://leakcade.com/login-rate-limit.html)
 - [Supabase user_metadata roles: anyone can make themselves admin](https://leakcade.com/supabase-user-metadata.html)
 - [Any signed-in user can delete your Supabase data](https://leakcade.com/supabase-delete-policies.html)
+- [Your Next.js server actions are public endpoints](https://leakcade.com/nextjs-server-actions-security.html)
 - [Sponsors](https://leakcade.com/sponsors.html)
