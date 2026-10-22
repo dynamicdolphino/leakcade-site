@@ -1,13 +1,13 @@
 # Leakcade
 > AI-assisted security and bug review for public GitHub repos built with AI coding tools. $19 per check, HTML + PDF report by email within ~1 hour, with copy-paste fix prompts for Cursor and Claude Code. Status: pre-launch.
 
-Last updated: 2026-10-21
+Last updated: 2026-10-22
 
 ## Key facts
 - Free teaser: scanners only (gitleaks, Semgrep, Bandit, OSV, package-name check, auth-route check). Score, counts by severity, one redacted sample finding. No fix prompts. Cap 20 MB, rate-limited. Email required; newsletter opt-in unchecked by default.
 - Full report: $19 USD one-time per repo (Stripe). Same scanners plus AI review (Claude). Full findings with fix prompts, HTML + PDF by email within ~1 hour.
 - Input: public GitHub repository URL + email
-- Checks: leaked secrets incl. git history (gitleaks), static analysis (Semgrep), vulnerable dependencies (OSV), dependencies that don't exist on npm/PyPI (slopsquatting check), write routes without a visible login check in Next.js/Express/FastAPI and Supabase tables without RLS or with USING (true) write policies (auth-route check, heuristic), payment bypasses: unsigned Stripe/Lemon Squeezy webhooks, success pages that grant the paid plan without verifying payment, paid status written from browser code (payment check, heuristic), secrets shipped to the browser: secret-looking env vars with public prefixes (NEXT_PUBLIC_, VITE_, REACT_APP_, EXPO_PUBLIC_, PUBLIC_) and server secrets or service-role clients in "use client" files (client-env check, heuristic), login/signup/password-reset/OTP routes and paid-AI routes with no visible rate limit in Next.js/Express/FastAPI (rate-limit check, heuristic), roles, admin flags, plans or org ids read from Supabase user_metadata, which every user can edit, in SQL policies/triggers or app code (user_metadata check, heuristic), AI review on the paid report only
+- Checks: leaked secrets incl. git history (gitleaks), static analysis (Semgrep), vulnerable dependencies (OSV), dependencies that don't exist on npm/PyPI (slopsquatting check), write routes without a visible login check in Next.js/Express/FastAPI and Supabase tables without RLS or with USING (true) write policies (auth-route check, heuristic), payment bypasses: unsigned Stripe/Lemon Squeezy webhooks, success pages that grant the paid plan without verifying payment, paid status written from browser code (payment check, heuristic), secrets shipped to the browser: secret-looking env vars with public prefixes (NEXT_PUBLIC_, VITE_, REACT_APP_, EXPO_PUBLIC_, PUBLIC_) and server secrets or service-role clients in "use client" files (client-env check, heuristic), login/signup/password-reset/OTP routes and paid-AI routes with no visible rate limit in Next.js/Express/FastAPI (rate-limit check, heuristic), roles, admin flags, plans or org ids read from Supabase user_metadata, which every user can edit, in SQL policies/triggers or app code (user_metadata check, heuristic), Supabase DELETE/UPDATE/ALL policies that only check auth.role() = 'authenticated' or auth.uid() IS NOT NULL, writes open to anon without an auth check, RLS disabled again in a later migration (policy check, heuristic), AI review on the paid report only
 - Code is never executed; scanned in a no-network sandbox; deleted after the report
 - Refunds: automatic if the check can't run or the report isn't delivered within 24 hours (policy is a draft)
 - Not a replacement for a professional security audit; no private repos yet
@@ -26,4 +26,7 @@ Last updated: 2026-10-21
 - [Slopsquatting explained](https://leakcade.com/slopsquatting-explained.html)
 - [VITE_ and NEXT_PUBLIC_ env vars are public](https://leakcade.com/public-env-vars.html)
 - [Your Stripe webhook can be faked](https://leakcade.com/stripe-webhook-security.html)
+- [Your login has no rate limit](https://leakcade.com/login-rate-limit.html)
+- [Supabase user_metadata roles: anyone can make themselves admin](https://leakcade.com/supabase-user-metadata.html)
+- [Any signed-in user can delete your Supabase data](https://leakcade.com/supabase-delete-policies.html)
 - [Sponsors](https://leakcade.com/sponsors.html)
