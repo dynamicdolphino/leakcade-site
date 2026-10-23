@@ -10,6 +10,30 @@
     try{await navigator.clipboard.writeText(txt);b.textContent='COPIED';}catch{b.textContent='SELECT TEXT';}
     setTimeout(()=>b.textContent='COPY',1800);
   }));
+  // Guides: Copy button on prompt boxes. Added here, so without JS the prompt is just selectable text.
+  $$('.pbox').forEach(box=>{
+    const pre=$('pre',box), bar=$('.pbox-h',box); if(!pre||!bar) return;
+    const b=document.createElement('button'), live=document.createElement('span'); let t;
+    b.type='button'; b.className='pcopy'; b.textContent='Copy'; b.setAttribute('aria-label','Copy prompt');
+    live.className='sr'; live.setAttribute('role','status'); live.setAttribute('aria-live','polite');
+    bar.append(b); box.append(live);
+    const show=(label,msg)=>{b.textContent=label; b.classList.toggle('is-copied',label==='Copied!'); live.textContent=msg; clearTimeout(t);
+      t=setTimeout(()=>{b.textContent='Copy'; b.classList.remove('is-copied'); live.textContent='';},2000);};
+    const legacy=txt=>{ // old browsers and plain http: hidden textarea + execCommand
+      const ta=document.createElement('textarea'); let ok=false;
+      ta.value=txt; ta.setAttribute('readonly',''); ta.style.cssText='position:fixed;top:0;left:0;opacity:0';
+      document.body.append(ta); ta.select(); ta.setSelectionRange(0,txt.length);
+      try{ok=document.execCommand('copy');}catch(e){}
+      ta.remove(); b.focus(); return ok;};
+    b.addEventListener('click',async()=>{
+      const txt=pre.textContent; let ok=false;
+      if(navigator.clipboard&&window.isSecureContext){try{await navigator.clipboard.writeText(txt); ok=true;}catch(e){}}
+      if(!ok) ok=legacy(txt);
+      if(ok) return show('Copied!','Prompt copied to the clipboard.');
+      const r=document.createRange(); r.selectNodeContents(pre); const s=getSelection(); s.removeAllRanges(); s.addRange(r);
+      show('Selected','Copy failed. The prompt is selected, press Ctrl+C or Cmd+C.');
+    });
+  });
   const f=$('#start-form');
   if(f){
     const btn=$('.btn-label',f), modes=$$('input[name=mode]',f);
