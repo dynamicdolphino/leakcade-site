@@ -358,3 +358,9 @@ footer .wrap{gap:32px}
 .pcopy:focus-visible{outline:2px solid #fff;outline-offset:3px}
 .pcopy.is-copied{background:#fff}
 @media (max-width:640px){.pbox-h{min-height:56px}.pcopy{min-height:44px;min-width:104px}}
+/* cheat-sheet rows (draft page /cheat-sheet/) */
+.cs-list{list-style:none;margin:24px 0;padding:0;display:grid;gap:14px}
+.cs-row .ba-p pre{margin:10px 0 0}
+.cs-row .ba-p .fine{margin:10px 0 0}
+/* long inline code (URLs, route paths) wraps instead of being clipped on mobile */
+.art :not(pre)>code{overflow-wrap:anywhere}
