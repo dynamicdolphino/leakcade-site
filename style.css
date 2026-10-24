@@ -391,3 +391,19 @@ footer .wrap{gap:32px}
 .cs-row .ba-p .fine{margin:10px 0 0}
 /* long inline code (URLs, route paths) wraps instead of being clipped on mobile */
 .art :not(pre)>code{overflow-wrap:anywhere}
+
+/* Guides hub search + topic filter (progressive; app.js) */
+.hub-search{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:18px 0 4px;padding:10px 14px;border:1px solid var(--line2);border-radius:16px;background:var(--bg2)}
+.hub-search .search-ic{width:18px;height:18px;color:var(--ac);flex:none}
+.hub-search input[type=search]{flex:1 1 200px;min-width:0;border:0;outline:0;background:transparent;color:var(--ink);font:400 16px Geist,system-ui,sans-serif;padding:6px 0}
+.hub-search input[type=search]::placeholder{color:var(--mu)}
+.hub-search input[type=search]::-webkit-search-cancel-button{-webkit-appearance:none;appearance:none}
+.hub-status{flex:1 1 100%;margin:0;font:400 11px Pix;letter-spacing:.04em;color:var(--mu);min-height:1em}
+.hub-empty{margin:28px 0 8px;padding:18px 20px;border:1px dashed var(--line2);border-radius:16px;color:var(--mu);background:rgba(200,255,61,.03)}
+.topic-nav a.is-active{border-color:var(--ac);color:var(--ac);background:rgba(200,255,61,.1)}
+.topic-nav a.is-all .nav-n{background:rgba(200,255,61,.18)}
+.topic[hidden],.guides li[hidden]{display:none !important}
+@media (max-width:700px){
+  .hub-search{padding:10px 12px;gap:8px}
+  .hub-search input[type=search]{font-size:16px} /* keep 16px to avoid iOS zoom */
+}

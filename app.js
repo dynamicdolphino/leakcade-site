@@ -54,4 +54,75 @@
       if(!paid) f.classList.add('busy');
     });
   }
+
+  // Guides hub: search + topic filter. Progressive: without this block the page is a plain list with anchors.
+  const hub = $('#hub-results'), hq = $('#hub-q');
+  if(hub && hq){
+    const cards = $$('li[data-q]', hub), topics = $$('section.topic[data-topic]', hub);
+    const nav = $('[data-hub-filter]', hub), status = $('#hub-status'), empty = $('#hub-empty');
+    let topic = '', q = '';
+    function apply(){
+      let shown = 0;
+      cards.forEach(li=>{
+        const okTopic = !topic || li.getAttribute('data-topic')===topic;
+        const okQ = !q || (li.getAttribute('data-q')||'').includes(q);
+        const show = okTopic && okQ;
+        li.hidden = !show;
+        if(show) shown++;
+      });
+      topics.forEach(sec=>{
+        const any = $$('li[data-q]', sec).some(li=>!li.hidden);
+        sec.hidden = !any;
+        const b = $('.topic-count b', sec); if(b) b.textContent = $$('li[data-q]', sec).filter(li=>!li.hidden).length;
+      });
+      if(nav){
+        $$('a[data-topic]', nav).forEach(a=>{
+          const t = a.getAttribute('data-topic')||'';
+          const n = cards.filter(li=>{
+            const okT = !t || li.getAttribute('data-topic')===t;
+            const okQ = !q || (li.getAttribute('data-q')||'').includes(q);
+            return okT && okQ;
+          }).length;
+          const badge = $('.nav-n', a); if(badge) badge.textContent = n;
+        });
+      }
+      if(empty) empty.hidden = shown>0;
+      if(status){
+        if(!q && !topic) status.textContent = '';
+        else if(shown===0) status.textContent = 'No guides match.';
+        else status.textContent = shown===1 ? '1 guide' : (shown+' guides');
+      }
+    }
+    if(nav){
+      const ul = $('ul', nav), li = document.createElement('li');
+      li.innerHTML = '<a href="/guides/" data-topic="" class="is-all is-active"><span>All</span><span class="nav-n">'+cards.length+'</span></a>';
+      ul.prepend(li);
+      nav.addEventListener('click', e=>{
+        const a = e.target.closest('a[data-topic]'); if(!a || !nav.contains(a)) return;
+        e.preventDefault();
+        topic = a.getAttribute('data-topic') || '';
+        $$('a[data-topic]', nav).forEach(x=>x.classList.toggle('is-active', x===a));
+        try{
+          if(topic) history.replaceState(null,'','#'+topic);
+          else history.replaceState(null,'', location.pathname + location.search);
+        }catch(err){}
+        apply();
+        if(topic){ const el = document.getElementById(topic); if(el) el.scrollIntoView({behavior:'smooth', block:'start'}); }
+        else hub.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+      const hash = (location.hash||'').replace(/^#/,'');
+      if(hash){
+        const a = Array.from($$('a[data-topic]', nav)).find(x=>x.getAttribute('data-topic')===hash);
+        if(a){ topic=hash; $$('a[data-topic]',nav).forEach(x=>x.classList.toggle('is-active',x===a)); }
+      }
+    }
+    let debounce;
+    hq.addEventListener('input', ()=>{
+      clearTimeout(debounce);
+      debounce = setTimeout(()=>{ q = hq.value.trim().toLowerCase(); apply(); }, 80);
+    });
+    hq.addEventListener('keydown', e=>{ if(e.key==='Escape'){ hq.value=''; q=''; apply(); } });
+    apply();
+  }
+
 })();
