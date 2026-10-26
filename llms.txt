@@ -66,6 +66,7 @@ Last updated: 2026-10-22
 - [Is the Supabase anon key safe to expose? Yes, if RLS is on](https://leakcade.com/guides/supabase-anon-key-safe/)
 - [Supabase Edge Functions security: verify_jwt, secrets and RLS](https://leakcade.com/guides/supabase-edge-functions-security/)
 - [getSession vs getUser: what to trust in Supabase server code](https://leakcade.com/guides/supabase-getsession-vs-getuser/)
+- [Test Supabase RLS from outside with curl, SQL and pgTAP](https://leakcade.com/guides/test-supabase-rls/)
 - [Webhook signature verification beyond Stripe](https://leakcade.com/guides/webhook-signature-verification/)
 - [Zod input validation for Next.js API routes and server actions](https://leakcade.com/guides/zod-input-validation-api-routes/)
 - [Sponsors](https://leakcade.com/sponsors/)
