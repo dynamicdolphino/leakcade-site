@@ -1,7 +1,7 @@
 # Leakcade
 > AI-assisted security and bug review for public GitHub repos built with AI coding tools. $19 per check, HTML + PDF report by email within ~1 hour, with copy-paste fix prompts for Cursor and Claude Code. Status: pre-launch.
 
-Last updated: 2026-10-22
+Last updated: 2026-10-25
 
 ## Key facts
 - Free teaser: scanners only (gitleaks, Semgrep, Bandit, OSV, package-name check, auth-route check). Score, counts by severity, one redacted sample finding. No fix prompts. Cap 20 MB, rate-limited. Email required; newsletter opt-in unchecked by default.
