@@ -42,6 +42,7 @@ Last updated: 2026-10-25
 - [Cursor and Claude Code security settings to change today](https://leakcade.com/guides/cursor-claude-code-security-checklist/)
 - [.env file leaks: fix them on GitHub, Vercel and Netlify](https://leakcade.com/guides/env-file-leaks-vercel-netlify/)
 - [Exposed admin routes: why hiding /admin doesn't protect it](https://leakcade.com/guides/exposed-admin-routes/)
+- [Find secrets in git history and what to do next](https://leakcade.com/guides/find-secrets-in-git-history/)
 - [Firebase security rules: fix test mode and open access](https://leakcade.com/guides/firebase-security-rules/)
 - [GitHub Actions secrets: lock down your CI before it leaks](https://leakcade.com/guides/github-actions-secrets-security/)
 - [Hide API keys in a React frontend with a server proxy](https://leakcade.com/guides/hide-api-keys-react-frontend/)
