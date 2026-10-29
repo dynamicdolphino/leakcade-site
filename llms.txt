@@ -1,7 +1,7 @@
 # Leakcade
 > AI-assisted security and bug review for public GitHub repos built with AI coding tools. $19 per check, HTML + PDF report by email within ~1 hour, with copy-paste fix prompts for Cursor and Claude Code. Status: pre-launch.
 
-Last updated: 2026-10-27
+Last updated: 2026-10-28
 
 ## Key facts
 - Free teaser: scanners only (gitleaks, Semgrep, Bandit, OSV, package-name check, auth-route check). Score, counts by severity, one redacted sample finding. No fix prompts. Cap 20 MB, rate-limited. Email required; newsletter opt-in unchecked by default.
@@ -37,9 +37,11 @@ Last updated: 2026-10-27
 - [Repo scan vs URL scan: what each finds in a vibe-coded app](https://leakcade.com/guides/repo-scan-vs-url-scan/)
 - [Lovable security scan vs Leakcade: what each one checks](https://leakcade.com/guides/lovable-vs-leakcade/)
 - [What to learn when an AI agent deletes a production database](https://leakcade.com/guides/ai-agent-database-safety/)
+- [API key spending limits: cap the damage before a leak](https://leakcade.com/guides/api-key-spending-caps/)
 - [Clerk and Auth.js mistakes in AI-generated Next.js apps](https://leakcade.com/guides/clerk-nextauth-mistakes/)
 - [CORS misconfiguration: why origin: true leaks user data](https://leakcade.com/guides/cors-misconfiguration/)
 - [Cursor and Claude Code security settings to change today](https://leakcade.com/guides/cursor-claude-code-security-checklist/)
+- [Enable RLS when creating tables: the safe migration pattern](https://leakcade.com/guides/enable-rls-when-creating-tables/)
 - [.env file leaks: fix them on GitHub, Vercel and Netlify](https://leakcade.com/guides/env-file-leaks-vercel-netlify/)
 - [Exposed admin routes: why hiding /admin doesn't protect it](https://leakcade.com/guides/exposed-admin-routes/)
 - [Find secrets in git history and what to do next](https://leakcade.com/guides/find-secrets-in-git-history/)
@@ -60,6 +62,7 @@ Last updated: 2026-10-27
 - [Prompt injection: how to protect an app with an LLM inside](https://leakcade.com/guides/prompt-injection-ai-apps/)
 - [XSS in React: dangerouslySetInnerHTML, markdown and links](https://leakcade.com/guides/react-xss-ai-generated-code/)
 - [Rotate API keys after a host breach: the checklist](https://leakcade.com/guides/rotate-keys-after-host-breach/)
+- [Rotate Supabase keys without downtime: the safe order](https://leakcade.com/guides/rotate-supabase-keys-zero-downtime/)
 - [Security headers for Next.js: CSP, HSTS and the rest](https://leakcade.com/guides/security-headers-csp-nextjs/)
 - [SQL injection in ORM apps: raw queries, ORDER BY and .or()](https://leakcade.com/guides/sql-injection-orm/)
 - [SSRF: how URL fetch features expose your internal network](https://leakcade.com/guides/ssrf-url-fetch-features/)
@@ -67,6 +70,7 @@ Last updated: 2026-10-27
 - [Is the Supabase anon key safe to expose? Yes, if RLS is on](https://leakcade.com/guides/supabase-anon-key-safe/)
 - [Supabase Edge Functions security: verify_jwt, secrets and RLS](https://leakcade.com/guides/supabase-edge-functions-security/)
 - [getSession vs getUser: what to trust in Supabase server code](https://leakcade.com/guides/supabase-getsession-vs-getuser/)
+- [Service role key in the browser](https://leakcade.com/guides/supabase-service-role-in-browser/)
 - [Test Supabase RLS from outside with curl, SQL and pgTAP](https://leakcade.com/guides/test-supabase-rls/)
 - [Webhook signature verification beyond Stripe](https://leakcade.com/guides/webhook-signature-verification/)
 - [Zod input validation for Next.js API routes and server actions](https://leakcade.com/guides/zod-input-validation-api-routes/)
