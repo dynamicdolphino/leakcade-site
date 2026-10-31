@@ -1,7 +1,7 @@
 # Leakcade
 > AI-assisted security and bug review for public GitHub repos built with AI coding tools. $19 per check, HTML + PDF report by email within ~1 hour, with copy-paste fix prompts for Cursor and Claude Code. Status: pre-launch.
 
-Last updated: 2026-10-28
+Last updated: 2026-10-31
 
 ## Key facts
 - Free teaser: scanners only (gitleaks, Semgrep, Bandit, OSV, package-name check, auth-route check). Score, counts by severity, one redacted sample finding. No fix prompts. Cap 20 MB, rate-limited. Email required; newsletter opt-in unchecked by default.
@@ -38,6 +38,7 @@ Last updated: 2026-10-28
 - [Lovable security scan vs Leakcade: what each one checks](https://leakcade.com/guides/lovable-vs-leakcade/)
 - [What to learn when an AI agent deletes a production database](https://leakcade.com/guides/ai-agent-database-safety/)
 - [API key spending limits: cap the damage before a leak](https://leakcade.com/guides/api-key-spending-caps/)
+- [Best security scanner for vibe coded apps](https://leakcade.com/guides/best-security-scanner-vibe-coded-apps/)
 - [Clerk and Auth.js mistakes in AI-generated Next.js apps](https://leakcade.com/guides/clerk-nextauth-mistakes/)
 - [CORS misconfiguration: why origin: true leaks user data](https://leakcade.com/guides/cors-misconfiguration/)
 - [Cursor and Claude Code security settings to change today](https://leakcade.com/guides/cursor-claude-code-security-checklist/)
@@ -52,6 +53,7 @@ Last updated: 2026-10-28
 - [Insecure file uploads: stop scripts, huge files and bad filenames](https://leakcade.com/guides/insecure-file-uploads/)
 - [Is my vibe coded app secure? A 30-minute test plan](https://leakcade.com/guides/is-my-vibe-coded-app-secure/)
 - [Where to store your session token: localStorage vs cookies](https://leakcade.com/guides/jwt-localstorage-vs-cookies/)
+- [Malicious agent files: AGENTS.md, CLAUDE.md and hooks](https://leakcade.com/guides/malicious-agent-files/)
 - [NoSQL injection in Express and MongoDB: login bypass fix](https://leakcade.com/guides/mongodb-nosql-injection/)
 - [Multi-tenant data isolation: keep each org's data apart](https://leakcade.com/guides/multi-tenant-data-isolation/)
 - [Next.js middleware is not enough to protect your routes](https://leakcade.com/guides/nextjs-middleware-auth-bypass/)
@@ -70,6 +72,7 @@ Last updated: 2026-10-28
 - [Is the Supabase anon key safe to expose? Yes, if RLS is on](https://leakcade.com/guides/supabase-anon-key-safe/)
 - [Supabase Edge Functions security: verify_jwt, secrets and RLS](https://leakcade.com/guides/supabase-edge-functions-security/)
 - [getSession vs getUser: what to trust in Supabase server code](https://leakcade.com/guides/supabase-getsession-vs-getuser/)
+- [Test RLS with a second account: user B must see 0 rows](https://leakcade.com/guides/supabase-rls-second-account-test/)
 - [Service role key in the browser](https://leakcade.com/guides/supabase-service-role-in-browser/)
 - [Test Supabase RLS from outside with curl, SQL and pgTAP](https://leakcade.com/guides/test-supabase-rls/)
 - [Webhook signature verification beyond Stripe](https://leakcade.com/guides/webhook-signature-verification/)
