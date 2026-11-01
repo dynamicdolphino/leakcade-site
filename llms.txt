@@ -1,7 +1,7 @@
 # Leakcade
 > AI-assisted security and bug review for public GitHub repos built with AI coding tools. $19 per check, HTML + PDF report by email within ~1 hour, with copy-paste fix prompts for Cursor and Claude Code. Status: pre-launch.
 
-Last updated: 2026-10-31
+Last updated: 2026-11-01
 
 ## Key facts
 - Free teaser: scanners only (gitleaks, Semgrep, Bandit, OSV, package-name check, auth-route check). Score, counts by severity, one redacted sample finding. No fix prompts. Cap 20 MB, rate-limited. Email required; newsletter opt-in unchecked by default.
@@ -36,6 +36,7 @@ Last updated: 2026-10-31
 - [Supabase storage policies: keep users out of each other's files](https://leakcade.com/guides/supabase-storage-policies/)
 - [Repo scan vs URL scan: what each finds in a vibe-coded app](https://leakcade.com/guides/repo-scan-vs-url-scan/)
 - [Lovable security scan vs Leakcade: what each one checks](https://leakcade.com/guides/lovable-vs-leakcade/)
+- [Abandoned Lovable apps: find, lock down or shut them down](https://leakcade.com/guides/abandoned-lovable-apps/)
 - [What to learn when an AI agent deletes a production database](https://leakcade.com/guides/ai-agent-database-safety/)
 - [API key spending limits: cap the damage before a leak](https://leakcade.com/guides/api-key-spending-caps/)
 - [Best security scanner for vibe coded apps](https://leakcade.com/guides/best-security-scanner-vibe-coded-apps/)
