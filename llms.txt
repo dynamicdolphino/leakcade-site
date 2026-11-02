@@ -12,6 +12,12 @@ Last updated: 2026-11-01
 - Refunds: automatic if the check can't run or the report isn't delivered within 24 hours (policy is a draft)
 - Not a replacement for a professional security audit; no private repos yet
 
+## Leakcade vs URL scanners
+- URL scanners load the live site from outside (JavaScript bundle, headers, exposed files). Leakcade reads the public GitHub repo as text instead: the files, the last 50 commits and the Supabase SQL migrations.
+- So it can find what a URL scan can't see: keys deleted from the code but still in old commits, tables created without RLS in a migration, and policies that only check that a user is logged in.
+- It does not load your site, check headers or the live database rules, read private repos, or monitor over time. Pairing a free URL scan with Leakcade covers both sides.
+- Comparison of 12 tools: https://leakcade.com/guides/best-security-scanner-vibe-coded-apps/. Repo scan vs URL scan: https://leakcade.com/guides/repo-scan-vs-url-scan/
+
 ## Pages
 - [Product facts](https://leakcade.com/about/)
 - [Security & data handling](https://leakcade.com/security/)
