@@ -1,7 +1,7 @@
 # Leakcade
 > AI-assisted security and bug review for public GitHub repos built with AI coding tools. $19 per check, HTML + PDF report by email within ~1 hour, with copy-paste fix prompts for Cursor and Claude Code. Status: pre-launch.
 
-Last updated: 2026-11-07
+Last updated: 2026-11-08
 
 ## Key facts
 - Free teaser: scanners only (gitleaks, Semgrep, Bandit, OSV, package-name check, auth-route check). Score, counts by severity, one redacted sample finding. No fix prompts. Cap 20 MB, rate-limited. Email required; newsletter opt-in unchecked by default.
@@ -46,6 +46,7 @@ Last updated: 2026-11-07
 - [What to learn when an AI agent deletes a production database](https://leakcade.com/guides/ai-agent-database-safety/)
 - [API key spending limits: cap the damage before a leak](https://leakcade.com/guides/api-key-spending-caps/)
 - [Best security scanner for vibe coded apps](https://leakcade.com/guides/best-security-scanner-vibe-coded-apps/)
+- [Claude Code settings.local.json secrets](https://leakcade.com/guides/claude-code-settings-local-json-secrets/)
 - [Clerk and Auth.js mistakes in AI-generated Next.js apps](https://leakcade.com/guides/clerk-nextauth-mistakes/)
 - [CORS misconfiguration: why origin: true leaks user data](https://leakcade.com/guides/cors-misconfiguration/)
 - [Cursor and Claude Code security settings to change today](https://leakcade.com/guides/cursor-claude-code-security-checklist/)
