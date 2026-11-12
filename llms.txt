@@ -1,7 +1,7 @@
 # Leakcade
 > AI-assisted security and bug review for public GitHub repos built with AI coding tools. $19 per check, HTML + PDF report by email within ~1 hour, with copy-paste fix prompts for Cursor and Claude Code. Status: pre-launch.
 
-Last updated: 2026-11-08
+Last updated: 2026-11-11
 
 ## Key facts
 - Free teaser: scanners only (gitleaks, Semgrep, Bandit, OSV, package-name check, auth-route check). Score, counts by severity, one redacted sample finding. No fix prompts. Cap 20 MB, rate-limited. Email required; newsletter opt-in unchecked by default.
@@ -61,6 +61,7 @@ Last updated: 2026-11-08
 - [Insecure file uploads: stop scripts, huge files and bad filenames](https://leakcade.com/guides/insecure-file-uploads/)
 - [Is my vibe coded app secure? A 30-minute test plan](https://leakcade.com/guides/is-my-vibe-coded-app-secure/)
 - [Where to store your session token: localStorage vs cookies](https://leakcade.com/guides/jwt-localstorage-vs-cookies/)
+- [Lovable app maintenance: backup, restore and deploy fixes](https://leakcade.com/guides/lovable-app-maintenance/)
 - [Malicious agent files: AGENTS.md, CLAUDE.md and hooks](https://leakcade.com/guides/malicious-agent-files/)
 - [NoSQL injection in Express and MongoDB: login bypass fix](https://leakcade.com/guides/mongodb-nosql-injection/)
 - [Multi-tenant data isolation: keep each org's data apart](https://leakcade.com/guides/multi-tenant-data-isolation/)
